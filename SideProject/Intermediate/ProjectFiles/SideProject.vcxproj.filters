@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\SideProject.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SideProject.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\SideProjectEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\SideProject">
+      <UniqueIdentifier>{150A4200-13EB-3416-99BE-23045E76F3BF}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SideProject\SideProject.Build.cs">
+      <Filter>Source\SideProject</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\SideProject\SideProject.cpp">
+      <Filter>Source\SideProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SideProject\SideProject.h">
+      <Filter>Source\SideProject</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SideProject\SideProjectCharacter.cpp">
+      <Filter>Source\SideProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SideProject\SideProjectCharacter.h">
+      <Filter>Source\SideProject</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SideProject\SideProjectGameMode.cpp">
+      <Filter>Source\SideProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SideProject\SideProjectGameMode.h">
+      <Filter>Source\SideProject</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

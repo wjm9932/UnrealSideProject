@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "SideProject",
+			"Path": "C:\\Digipen\\MyDigipen\\Digipen\\Unreal\\UnrealSideProject\\SideProject\\Source\\SideProject.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "SideProjectEditor",
+			"Path": "C:\\Digipen\\MyDigipen\\Digipen\\Unreal\\UnrealSideProject\\SideProject\\Source\\SideProjectEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

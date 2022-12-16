@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\Digipen\\MyDigipen\\Digipen\\Unreal\\UnrealSideProject\\SideProject\\Source\\SideProject\\SideProject.Build.cs",
+		"C:\\Digipen\\MyDigipen\\Digipen\\Unreal\\UnrealSideProject\\SideProject\\Source\\SideProject.Target.cs",
+		"C:\\Digipen\\MyDigipen\\Digipen\\Unreal\\UnrealSideProject\\SideProject\\Source\\SideProjectEditor.Target.cs"
+	],
+	"EngineVersion": "5.0.3"
+}
