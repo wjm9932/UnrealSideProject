@@ -1,0 +1,19 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\digipen\\mydigipen\\digipen\\unreal\\unrealsideproject\\sideproject\\intermediate\\build\\win64\\unrealeditor\\inc\\sideproject\\sideprojectgamemode.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\digipen\\mydigipen\\digipen\\unreal\\unrealsideproject\\sideproject\\intermediate\\build\\win64\\sideprojecteditor\\debuggame\\engine\\sharedpch.engine.nonoptimized.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\digipen\\mydigipen\\digipen\\unreal\\unrealsideproject\\sideproject\\intermediate\\build\\win64\\unrealeditor\\debuggame\\sideproject\\definitions.sideproject.h",
+            "c:\\digipen\\mydigipen\\digipen\\unreal\\unrealsideproject\\sideproject\\source\\sideproject\\sideprojectgamemode.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\serverstatreplicator.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\gamemodebase.generated.h",
+            "c:\\digipen\\mydigipen\\digipen\\unreal\\unrealsideproject\\sideproject\\intermediate\\build\\win64\\unrealeditor\\inc\\sideproject\\sideprojectgamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

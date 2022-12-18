@@ -1,9 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
+#include "MainCharacter.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
-#include "MainCharacter.h"
 
 // Sets default values
 AMainCharacter::AMainCharacter()
@@ -30,11 +30,13 @@ void AMainCharacter::BeginPlay()
 void AMainCharacter::MoveForward(float Value)
 {
 	AddMovementInput(GetActorForwardVector(), Value);
+	verticalValueForAnimation = Value;
 }
 
 void AMainCharacter::MoveRight(float Value)
 {
 	AddMovementInput(GetActorRightVector(), Value);
+	horizontalValueForAnimation = Value;
 }
 
 // Called every frame
@@ -57,5 +59,25 @@ void AMainCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 
 	PlayerInputComponent->BindAxis("Turn Right / Left Mouse", this, &APawn::AddControllerYawInput);
 	PlayerInputComponent->BindAxis("Look Up / Down Mouse", this, &APawn::AddControllerPitchInput);
+}
+
+void AMainCharacter::SetHorizontalForAnimation(float value)
+{
+	horizontalValueForAnimation = value;
+}
+
+void AMainCharacter::SetVerticalForAnimation(float value)
+{
+	verticalValueForAnimation = value;
+}
+
+float AMainCharacter::GetHorizontalForAnimation()
+{
+	return horizontalValueForAnimation;
+}
+
+float AMainCharacter::GetVerticalForAnimation()
+{
+	return verticalValueForAnimation;
 }
 

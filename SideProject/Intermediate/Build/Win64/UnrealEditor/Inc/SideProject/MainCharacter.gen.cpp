@@ -38,6 +38,14 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_followCamera_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_followCamera;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_verticalValueForAnimation_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_verticalValueForAnimation;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_horizontalValueForAnimation_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_horizontalValueForAnimation;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -69,9 +77,25 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMainCharacter_Statics::NewProp_followCamera = { "followCamera", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMainCharacter, followCamera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AMainCharacter_Statics::NewProp_followCamera_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMainCharacter_Statics::NewProp_followCamera_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainCharacter_Statics::NewProp_verticalValueForAnimation_MetaData[] = {
+		{ "Category", "MainCharacter" },
+		{ "ModuleRelativePath", "MainCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMainCharacter_Statics::NewProp_verticalValueForAnimation = { "verticalValueForAnimation", nullptr, (EPropertyFlags)0x0040000000020001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMainCharacter, verticalValueForAnimation), METADATA_PARAMS(Z_Construct_UClass_AMainCharacter_Statics::NewProp_verticalValueForAnimation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMainCharacter_Statics::NewProp_verticalValueForAnimation_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMainCharacter_Statics::NewProp_horizontalValueForAnimation_MetaData[] = {
+		{ "Category", "MainCharacter" },
+		{ "ModuleRelativePath", "MainCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMainCharacter_Statics::NewProp_horizontalValueForAnimation = { "horizontalValueForAnimation", nullptr, (EPropertyFlags)0x0040000000020001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMainCharacter, horizontalValueForAnimation), METADATA_PARAMS(Z_Construct_UClass_AMainCharacter_Statics::NewProp_horizontalValueForAnimation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMainCharacter_Statics::NewProp_horizontalValueForAnimation_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMainCharacter_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainCharacter_Statics::NewProp_springArm,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainCharacter_Statics::NewProp_followCamera,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainCharacter_Statics::NewProp_verticalValueForAnimation,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMainCharacter_Statics::NewProp_horizontalValueForAnimation,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AMainCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AMainCharacter>::IsAbstract,
@@ -109,9 +133,9 @@ void EmptyLinkFunctionForGeneratedCodeMainCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_SideProject_Source_SideProject_MainCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMainCharacter, AMainCharacter::StaticClass, TEXT("AMainCharacter"), &Z_Registration_Info_UClass_AMainCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMainCharacter), 2223320784U) },
+		{ Z_Construct_UClass_AMainCharacter, AMainCharacter::StaticClass, TEXT("AMainCharacter"), &Z_Registration_Info_UClass_AMainCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMainCharacter), 2969685215U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_SideProject_Source_SideProject_MainCharacter_h_1795231336(TEXT("/Script/SideProject"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_SideProject_Source_SideProject_MainCharacter_h_1888840660(TEXT("/Script/SideProject"),
 		Z_CompiledInDeferFile_FID_SideProject_Source_SideProject_MainCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_SideProject_Source_SideProject_MainCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

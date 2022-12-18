@@ -32,10 +32,21 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	void SetHorizontalForAnimation(float value);
+	void SetVerticalForAnimation(float value);
+
+	float GetHorizontalForAnimation();
+	float GetVerticalForAnimation();
 private:
 	UPROPERTY(VisibleAnywhere)
 	class USpringArmComponent* springArm;
 
 	UPROPERTY(VisibleAnywhere)
 	class UCameraComponent* followCamera;
+
+	UPROPERTY(VisibleAnywhere)
+	float verticalValueForAnimation;
+
+	UPROPERTY(VisibleAnywhere)
+	float horizontalValueForAnimation;
 };

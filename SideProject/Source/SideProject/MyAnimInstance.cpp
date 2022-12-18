@@ -2,6 +2,7 @@
 
 
 #include "MyAnimInstance.h"
+#include "MainCharacter.h"
 
 void UMyAnimInstance::NativeUpdateAnimation(float dt)
 {
@@ -11,5 +12,12 @@ void UMyAnimInstance::NativeUpdateAnimation(float dt)
 	if (IsValid(pawn) == true)
 	{
 		speed = pawn->GetVelocity().Size();
+	}
+
+	AMainCharacter* character = Cast<AMainCharacter>(pawn);
+	if (character != nullptr)
+	{
+		vertical = character->GetVerticalForAnimation();
+		horizontal = character->GetHorizontalForAnimation();
 	}
 }

@@ -33,6 +33,14 @@ void EmptyLinkFunctionForGeneratedCodeMyAnimInstance() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_speed_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_speed;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_horizontal_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_horizontal;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_vertical_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_vertical;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -51,14 +59,32 @@ void EmptyLinkFunctionForGeneratedCodeMyAnimInstance() {}
 #endif
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_speed_MetaData[] = {
-		{ "AllowPrivateAcess", "TRUE" },
+		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Pawn" },
 		{ "ModuleRelativePath", "MyAnimInstance.h" },
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_speed = { "speed", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyAnimInstance, speed), METADATA_PARAMS(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_speed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_speed_MetaData)) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_speed = { "speed", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyAnimInstance, speed), METADATA_PARAMS(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_speed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_speed_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_horizontal_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Pawn" },
+		{ "ModuleRelativePath", "MyAnimInstance.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_horizontal = { "horizontal", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyAnimInstance, horizontal), METADATA_PARAMS(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_horizontal_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_horizontal_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_vertical_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Pawn" },
+		{ "ModuleRelativePath", "MyAnimInstance.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_vertical = { "vertical", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyAnimInstance, vertical), METADATA_PARAMS(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_vertical_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_vertical_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UMyAnimInstance_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_speed,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_horizontal,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_vertical,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UMyAnimInstance_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UMyAnimInstance>::IsAbstract,
@@ -96,9 +122,9 @@ void EmptyLinkFunctionForGeneratedCodeMyAnimInstance() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_SideProject_Source_SideProject_MyAnimInstance_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UMyAnimInstance, UMyAnimInstance::StaticClass, TEXT("UMyAnimInstance"), &Z_Registration_Info_UClass_UMyAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyAnimInstance), 594146067U) },
+		{ Z_Construct_UClass_UMyAnimInstance, UMyAnimInstance::StaticClass, TEXT("UMyAnimInstance"), &Z_Registration_Info_UClass_UMyAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyAnimInstance), 632047117U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_SideProject_Source_SideProject_MyAnimInstance_h_1060169536(TEXT("/Script/SideProject"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_SideProject_Source_SideProject_MyAnimInstance_h_2473864047(TEXT("/Script/SideProject"),
 		Z_CompiledInDeferFile_FID_SideProject_Source_SideProject_MyAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_SideProject_Source_SideProject_MyAnimInstance_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

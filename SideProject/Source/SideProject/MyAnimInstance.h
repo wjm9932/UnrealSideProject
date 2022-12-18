@@ -16,6 +16,13 @@ class SIDEPROJECT_API UMyAnimInstance : public UAnimInstance
 public:
 	virtual void NativeUpdateAnimation(float dt) override;
 
-	UPROPERTY(EditAnyWhere, BlueprintReadOnly, Category = Pawn, Meta = (AllowPrivateAcess = true))
+private:
+	UPROPERTY(EditAnywhere, BluePrintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
 	float speed;
+
+	UPROPERTY(EditAnywhere, BluePrintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
+	float horizontal;
+
+	UPROPERTY(EditAnywhere, BluePrintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
+	float vertical;
 };
