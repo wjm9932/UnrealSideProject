@@ -32,6 +32,12 @@
     <Filter Include="Source\SideProject">
       <UniqueIdentifier>{150A4200-13EB-3416-99BE-23045E76F3BF}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\SideProject\MainCharacter.cpp">
+      <Filter>Source\SideProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SideProject\MainCharacter.h">
+      <Filter>Source\SideProject</Filter>
+    </ClInclude>
     <None Include="..\..\Source\SideProject\SideProject.Build.cs">
       <Filter>Source\SideProject</Filter>
     </None>
