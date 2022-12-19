@@ -18,8 +18,6 @@ public:
 
 	virtual void NativeUpdateAnimation(float dt) override;
 
-	void PlayAimMontage();
-	void StopPlayingAimMontage();
 
 private:
 	UPROPERTY(EditAnywhere, BluePrintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
@@ -30,7 +28,10 @@ private:
 
 	UPROPERTY(EditAnywhere, BluePrintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
 	float vertical;
+	
+	UPROPERTY(EditAnywhere, BluePrintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
+	bool isOnAim;
 
 	UPROPERTY(EditAnywhere, BluePrintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
-	UAnimMontage* aimMontage;
+	bool isOnFire;
 };

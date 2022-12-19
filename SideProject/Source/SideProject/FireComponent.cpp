@@ -31,3 +31,8 @@ void UFireComponent::SetAim(bool flag)
 	isOnAim = flag;
 }
 
+bool UFireComponent::GetIsOnAim()
+{
+	return isOnAim;
+}
+

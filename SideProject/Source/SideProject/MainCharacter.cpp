@@ -61,6 +61,9 @@ void AMainCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	PlayerInputComponent->BindAction("Aim", IE_Pressed, this, &AMainCharacter::Aim);
 	PlayerInputComponent->BindAction("Aim", IE_Released, this, &AMainCharacter::StopAimming);
 
+	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AMainCharacter::Fire);
+	PlayerInputComponent->BindAction("Fire", IE_Released, this, &AMainCharacter::StopFiring);
+
 	PlayerInputComponent->BindAxis("Move Forward / Backward", this, &AMainCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("Move Right / Left", this, &AMainCharacter::MoveRight);
 
@@ -91,20 +94,22 @@ float AMainCharacter::GetVerticalForAnimation()
 void AMainCharacter::Aim()
 {
 	fireComponent->SetAim(true);
-	auto myAnim = Cast<UMyAnimInstance>(GetMesh()->GetAnimInstance());
-	if (myAnim != nullptr)
-	{
-		myAnim->PlayAimMontage();
-	}
+	temp = true;
+}
+
+void AMainCharacter::Fire()
+{
+	isFire = true;
 }
 
 void AMainCharacter::StopAimming()
 {
 	fireComponent->SetAim(false);
-	auto myAnim = Cast<UMyAnimInstance>(GetMesh()->GetAnimInstance());
-	if (myAnim != nullptr)
-	{
-		myAnim->StopPlayingAimMontage();
-	}
+	temp = false;
+}
+
+void AMainCharacter::StopFiring()
+{
+	isFire = false;
 }
 

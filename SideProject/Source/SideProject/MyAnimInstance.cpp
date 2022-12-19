@@ -3,14 +3,10 @@
 
 #include "MyAnimInstance.h"
 #include "MainCharacter.h"
-
+#include "FireComponent.h"
 UMyAnimInstance::UMyAnimInstance()
 {
-	static ConstructorHelpers::FObjectFinder<UAnimMontage> AM(TEXT("AnimMontage'/Game/Animation/Base_Skeleton_Montage.Base_Skeleton_Montage'"));
-	if (AM.Succeeded() == true)
-	{
-		aimMontage = AM.Object;
-	}
+
 }
 
 void UMyAnimInstance::NativeUpdateAnimation(float dt)
@@ -28,15 +24,9 @@ void UMyAnimInstance::NativeUpdateAnimation(float dt)
 	{
 		vertical = character->GetVerticalForAnimation();
 		horizontal = character->GetHorizontalForAnimation();
+
+		isOnAim = character->temp;
+		isOnFire = character->isFire;
+		//UFireComponent* temp = character->GetComponentByClass(UFireComponent::StaticClass());
 	}
-}
-
-void UMyAnimInstance::PlayAimMontage()
-{
-	Montage_Play(aimMontage, 1.f);
-}
-
-void UMyAnimInstance::StopPlayingAimMontage()
-{
-	Montage_Stop(0.2f, aimMontage);
 }

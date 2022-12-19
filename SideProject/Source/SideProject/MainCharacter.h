@@ -39,7 +39,13 @@ public:
 	float GetVerticalForAnimation();
 
 	void Aim();
+	void Fire();
+
 	void StopAimming();
+	void StopFiring();
+
+	bool isFire;
+	bool temp;
 private:
 	UPROPERTY(VisibleAnywhere)
 	class USpringArmComponent* springArm;
