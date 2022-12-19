@@ -1,0 +1,15 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\digipen\\mydigipen\\digipen\\unreal\\unrealsideproject\\sideproject\\intermediate\\build\\win64\\unrealeditor\\inc\\sideproject\\firecomponent.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\digipen\\mydigipen\\digipen\\unreal\\unrealsideproject\\sideproject\\intermediate\\build\\win64\\sideprojecteditor\\debuggame\\engine\\sharedpch.engine.nonoptimized.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\digipen\\mydigipen\\digipen\\unreal\\unrealsideproject\\sideproject\\intermediate\\build\\win64\\unrealeditor\\debuggame\\sideproject\\definitions.sideproject.h",
+            "c:\\digipen\\mydigipen\\digipen\\unreal\\unrealsideproject\\sideproject\\source\\sideproject\\firecomponent.h",
+            "c:\\digipen\\mydigipen\\digipen\\unreal\\unrealsideproject\\sideproject\\intermediate\\build\\win64\\unrealeditor\\inc\\sideproject\\firecomponent.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

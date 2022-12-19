@@ -37,6 +37,9 @@ public:
 
 	float GetHorizontalForAnimation();
 	float GetVerticalForAnimation();
+
+	void Aim();
+	void StopAimming();
 private:
 	UPROPERTY(VisibleAnywhere)
 	class USpringArmComponent* springArm;
@@ -49,4 +52,7 @@ private:
 
 	UPROPERTY(VisibleAnywhere)
 	float horizontalValueForAnimation;
+
+	UPROPERTY(VisibleAnywhere)
+	class UFireComponent* fireComponent;
 };
