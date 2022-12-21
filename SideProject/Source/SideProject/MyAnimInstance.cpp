@@ -4,11 +4,6 @@
 #include "MyAnimInstance.h"
 #include "MainCharacter.h"
 #include "FireComponent.h"
-<<<<<<< Updated upstream
-UMyAnimInstance::UMyAnimInstance()
-{
-
-=======
 #include "GameFramework/CharacterMovementComponent.h"
 UMyAnimInstance::UMyAnimInstance()
 {
@@ -18,7 +13,6 @@ UMyAnimInstance::UMyAnimInstance()
 	{
 		reloadMontage = AM.Object;
 	}
->>>>>>> Stashed changes
 }
 
 void UMyAnimInstance::NativeUpdateAnimation(float dt)
@@ -37,13 +31,6 @@ void UMyAnimInstance::NativeUpdateAnimation(float dt)
 		vertical = character->GetVerticalForAnimation();
 		horizontal = character->GetHorizontalForAnimation();
 
-<<<<<<< Updated upstream
-		isOnAim = character->temp;
-		isOnFire = character->isFire;
-		//UFireComponent* temp = character->GetComponentByClass(UFireComponent::StaticClass());
-	}
-}
-=======
 		velocity = character->GetCharacterMovement()->Velocity.Size();
 		movementDir = CalculateDirection(character->GetVelocity(), character->GetActorRotation());
 
@@ -60,4 +47,3 @@ void UMyAnimInstance::PlayReloadMontage()
 {
 	Montage_Play(reloadMontage);
 }
->>>>>>> Stashed changes

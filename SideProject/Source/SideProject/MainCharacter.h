@@ -42,15 +42,7 @@ public:
 	void Reload();
 
 	void Aim();
-	void Fire();
-
 	void StopAimming();
-<<<<<<< Updated upstream
-	void StopFiring();
-
-	bool isFire;
-	bool temp;
-=======
 
 	void Fire();
 	void StopFiring();
@@ -70,7 +62,6 @@ public:
 	UPROPERTY(EditAnywhere, BluePrintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
 	bool isReloading;
 
->>>>>>> Stashed changes
 private:
 	UPROPERTY(VisibleAnywhere)
 	class USpringArmComponent* springArm;

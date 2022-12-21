@@ -17,9 +17,6 @@
             "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\character.generated.h",
             "c:\\digipen\\mydigipen\\digipen\\unreal\\unrealsideproject\\sideproject\\intermediate\\build\\win64\\unrealeditor\\inc\\sideproject\\maincharacter.generated.h",
             "c:\\digipen\\mydigipen\\digipen\\unreal\\unrealsideproject\\sideproject\\source\\sideproject\\firecomponent.h",
-<<<<<<< Updated upstream
-            "c:\\digipen\\mydigipen\\digipen\\unreal\\unrealsideproject\\sideproject\\intermediate\\build\\win64\\unrealeditor\\inc\\sideproject\\firecomponent.generated.h"
-=======
             "c:\\digipen\\mydigipen\\digipen\\unreal\\unrealsideproject\\sideproject\\intermediate\\build\\win64\\unrealeditor\\inc\\sideproject\\firecomponent.generated.h",
             "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementcomponent.h",
             "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\ai\\navigation\\navigationavoidancetypes.h",
@@ -39,7 +36,6 @@
             "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\public\\charactermovementcomponentasync.h",
             "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\charactermovementcomponentasync.generated.h",
             "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\charactermovementcomponent.generated.h"
->>>>>>> Stashed changes
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

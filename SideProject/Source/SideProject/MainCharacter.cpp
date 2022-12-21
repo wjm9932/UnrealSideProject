@@ -76,11 +76,8 @@ void AMainCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AMainCharacter::Fire);
 	PlayerInputComponent->BindAction("Fire", IE_Released, this, &AMainCharacter::StopFiring);
 
-<<<<<<< Updated upstream
-=======
 	PlayerInputComponent->BindAction("Reload", IE_Pressed, this, &AMainCharacter::Reload);
 
->>>>>>> Stashed changes
 	PlayerInputComponent->BindAxis("Move Forward / Backward", this, &AMainCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("Move Right / Left", this, &AMainCharacter::MoveRight);
 
@@ -131,10 +128,6 @@ void AMainCharacter::MoveRight(float Value)
 
 void AMainCharacter::Aim()
 {
-<<<<<<< Updated upstream
-	fireComponent->SetAim(true);
-	temp = true;
-=======
 	if (isReloading == false)
 	{
 		fireComponent->SetAim(true);
@@ -144,14 +137,10 @@ void AMainCharacter::Aim()
 	{
 		isOnAim = false;
 	}
->>>>>>> Stashed changes
 }
 
 void AMainCharacter::Fire()
 {
-<<<<<<< Updated upstream
-	isFire = true;
-=======
 	if (isReloading == false)
 	{
 		isFire = true;
@@ -160,24 +149,17 @@ void AMainCharacter::Fire()
 	{
 		isFire = false;
 	}
->>>>>>> Stashed changes
 }
 
 void AMainCharacter::StopAimming()
 {
 	fireComponent->SetAim(false);
-<<<<<<< Updated upstream
-	temp = false;
-=======
 	isOnAim = false;
->>>>>>> Stashed changes
 }
 
 void AMainCharacter::StopFiring()
 {
 	isFire = false;
-<<<<<<< Updated upstream
-=======
 }
 
 void AMainCharacter::Run()
@@ -191,7 +173,6 @@ void AMainCharacter::Run()
 	{
 		isRunning = false;
 	}
->>>>>>> Stashed changes
 }
 
 void AMainCharacter::StopRunning()

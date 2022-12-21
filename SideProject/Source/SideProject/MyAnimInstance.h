@@ -18,10 +18,7 @@ public:
 
 	virtual void NativeUpdateAnimation(float dt) override;
 
-<<<<<<< Updated upstream
-=======
 	void PlayReloadMontage();
->>>>>>> Stashed changes
 
 private:
 	UPROPERTY(EditAnywhere, BluePrintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
@@ -35,11 +32,6 @@ private:
 	
 	UPROPERTY(EditAnywhere, BluePrintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
 	bool isOnAim;
-<<<<<<< Updated upstream
-
-	UPROPERTY(EditAnywhere, BluePrintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
-	bool isOnFire;
-=======
 
 	UPROPERTY(EditAnywhere, BluePrintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
 	bool isOnFire;
@@ -58,5 +50,4 @@ private:
 
 	UPROPERTY(EditAnywhere, BluePrintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
 	UAnimMontage* reloadMontage;
->>>>>>> Stashed changes
 };
