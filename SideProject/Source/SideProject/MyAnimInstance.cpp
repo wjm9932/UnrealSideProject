@@ -4,9 +4,21 @@
 #include "MyAnimInstance.h"
 #include "MainCharacter.h"
 #include "FireComponent.h"
+<<<<<<< Updated upstream
 UMyAnimInstance::UMyAnimInstance()
 {
 
+=======
+#include "GameFramework/CharacterMovementComponent.h"
+UMyAnimInstance::UMyAnimInstance()
+{
+	static ConstructorHelpers::FObjectFinder<UAnimMontage> AM(TEXT("AnimMontage'/Game/Animation_2/SK_Mannequin_Montage.SK_Mannequin_Montage'"));
+
+	if (AM.Succeeded() == true)
+	{
+		reloadMontage = AM.Object;
+	}
+>>>>>>> Stashed changes
 }
 
 void UMyAnimInstance::NativeUpdateAnimation(float dt)
@@ -25,8 +37,27 @@ void UMyAnimInstance::NativeUpdateAnimation(float dt)
 		vertical = character->GetVerticalForAnimation();
 		horizontal = character->GetHorizontalForAnimation();
 
+<<<<<<< Updated upstream
 		isOnAim = character->temp;
 		isOnFire = character->isFire;
 		//UFireComponent* temp = character->GetComponentByClass(UFireComponent::StaticClass());
 	}
 }
+=======
+		velocity = character->GetCharacterMovement()->Velocity.Size();
+		movementDir = CalculateDirection(character->GetVelocity(), character->GetActorRotation());
+
+		isRunning = character->isRunning;
+		isReloading = character->isReloading;
+		isOnAim = character->isOnAim;
+		isOnFire = character->isFire;
+		
+		//isOnAim = character->GetComponentByClass(UFireComponent::StaticClass());
+	}
+}
+
+void UMyAnimInstance::PlayReloadMontage()
+{
+	Montage_Play(reloadMontage);
+}
+>>>>>>> Stashed changes

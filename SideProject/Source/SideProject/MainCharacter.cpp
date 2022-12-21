@@ -3,6 +3,7 @@
 
 #include "MainCharacter.h"
 #include "FireComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 #include "MyAnimInstance.h"
@@ -10,7 +11,7 @@
 // Sets default values
 AMainCharacter::AMainCharacter()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	springArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SPRINGARM"));
@@ -22,32 +23,40 @@ AMainCharacter::AMainCharacter()
 	followCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
 
 	fireComponent = CreateDefaultSubobject<UFireComponent>(TEXT("FIRE"));
+
+	horizontalValueForAnimation = 0.f;
+	verticalValueForAnimation = 0.f;
+
+	isOnAim = false;
+	isFire = false;
+	isRunning = false;
+	isReloading = false;
 }
 
 // Called when the game starts or when spawned
 void AMainCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	GetCharacterMovement()->MaxWalkSpeed = 200.f;
+
+	myInstance = Cast<UMyAnimInstance>(GetMesh()->GetAnimInstance());
+	if (myInstance != nullptr)
+	{
+		myInstance->OnMontageEnded.AddDynamic(this, &AMainCharacter::OnReloadMonatageEnded);
+	}
 }
 
-void AMainCharacter::MoveForward(float Value)
+void AMainCharacter::PostInitializeComponents()
 {
-	AddMovementInput(GetActorForwardVector(), Value);
-	verticalValueForAnimation = Value;
-}
+	Super::PostInitializeComponents();
 
-void AMainCharacter::MoveRight(float Value)
-{
-	AddMovementInput(GetActorRightVector(), Value);
-	horizontalValueForAnimation = Value;
+
 }
 
 // Called every frame
 void AMainCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 // Called to bind functionality to input
@@ -58,12 +67,20 @@ void AMainCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
+	PlayerInputComponent->BindAction("Run", IE_Pressed, this, &AMainCharacter::Run);
+	PlayerInputComponent->BindAction("Run", IE_Released, this, &AMainCharacter::StopRunning);
+
 	PlayerInputComponent->BindAction("Aim", IE_Pressed, this, &AMainCharacter::Aim);
 	PlayerInputComponent->BindAction("Aim", IE_Released, this, &AMainCharacter::StopAimming);
 
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AMainCharacter::Fire);
 	PlayerInputComponent->BindAction("Fire", IE_Released, this, &AMainCharacter::StopFiring);
 
+<<<<<<< Updated upstream
+=======
+	PlayerInputComponent->BindAction("Reload", IE_Pressed, this, &AMainCharacter::Reload);
+
+>>>>>>> Stashed changes
 	PlayerInputComponent->BindAxis("Move Forward / Backward", this, &AMainCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("Move Right / Left", this, &AMainCharacter::MoveRight);
 
@@ -91,25 +108,100 @@ float AMainCharacter::GetVerticalForAnimation()
 	return verticalValueForAnimation;
 }
 
+void AMainCharacter::Reload()
+{
+	if (isReloading == false)
+	{
+		isReloading = true;
+		myInstance->PlayReloadMontage();
+	}
+}
+
+void AMainCharacter::MoveForward(float Value)
+{
+	AddMovementInput(GetActorForwardVector(), Value);
+	verticalValueForAnimation = Value;
+}
+
+void AMainCharacter::MoveRight(float Value)
+{
+	AddMovementInput(GetActorRightVector(), Value);
+	horizontalValueForAnimation = Value;
+}
+
 void AMainCharacter::Aim()
 {
+<<<<<<< Updated upstream
 	fireComponent->SetAim(true);
 	temp = true;
+=======
+	if (isReloading == false)
+	{
+		fireComponent->SetAim(true);
+		isOnAim = true;
+	}
+	else
+	{
+		isOnAim = false;
+	}
+>>>>>>> Stashed changes
 }
 
 void AMainCharacter::Fire()
 {
+<<<<<<< Updated upstream
 	isFire = true;
+=======
+	if (isReloading == false)
+	{
+		isFire = true;
+	}
+	else
+	{
+		isFire = false;
+	}
+>>>>>>> Stashed changes
 }
 
 void AMainCharacter::StopAimming()
 {
 	fireComponent->SetAim(false);
+<<<<<<< Updated upstream
 	temp = false;
+=======
+	isOnAim = false;
+>>>>>>> Stashed changes
 }
 
 void AMainCharacter::StopFiring()
 {
 	isFire = false;
+<<<<<<< Updated upstream
+=======
+}
+
+void AMainCharacter::Run()
+{
+	if (GetWorld()->GetFirstPlayerController()->IsInputKeyDown(EKeys::W) || GetWorld()->GetFirstPlayerController()->IsInputKeyDown(EKeys::S))
+	{
+		GetCharacterMovement()->MaxWalkSpeed = 600.f;
+		isRunning = true;
+	}
+	else
+	{
+		isRunning = false;
+	}
+>>>>>>> Stashed changes
+}
+
+void AMainCharacter::StopRunning()
+{
+	GetCharacterMovement()->MaxWalkSpeed = 200.f;
+	isRunning = false;
+}
+
+void AMainCharacter::OnReloadMonatageEnded(UAnimMontage* montage, bool bInterrupted)
+{
+	isReloading = false;
 }
 

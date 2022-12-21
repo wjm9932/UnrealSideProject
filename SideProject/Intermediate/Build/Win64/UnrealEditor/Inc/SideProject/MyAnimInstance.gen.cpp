@@ -51,6 +51,31 @@ void EmptyLinkFunctionForGeneratedCodeMyAnimInstance() {}
 #endif
 		static void NewProp_isOnFire_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_isOnFire;
+<<<<<<< Updated upstream
+=======
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_movementDir_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_movementDir;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_isRunning_MetaData[];
+#endif
+		static void NewProp_isRunning_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_isRunning;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_isReloading_MetaData[];
+#endif
+		static void NewProp_isReloading_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_isReloading;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_velocity_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_velocity;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_reloadMontage_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_reloadMontage;
+>>>>>>> Stashed changes
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -105,6 +130,8 @@ void EmptyLinkFunctionForGeneratedCodeMyAnimInstance() {}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isOnAim = { "isOnAim", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UMyAnimInstance), &Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isOnAim_SetBit, METADATA_PARAMS(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isOnAim_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isOnAim_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isOnFire_MetaData[] = {
+<<<<<<< Updated upstream
+=======
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Pawn" },
 		{ "ModuleRelativePath", "MyAnimInstance.h" },
@@ -115,12 +142,77 @@ void EmptyLinkFunctionForGeneratedCodeMyAnimInstance() {}
 		((UMyAnimInstance*)Obj)->isOnFire = 1;
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isOnFire = { "isOnFire", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UMyAnimInstance), &Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isOnFire_SetBit, METADATA_PARAMS(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isOnFire_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isOnFire_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_movementDir_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "MyAnimInstance.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_movementDir = { "movementDir", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyAnimInstance, movementDir), METADATA_PARAMS(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_movementDir_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_movementDir_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isRunning_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "MyAnimInstance.h" },
+	};
+#endif
+	void Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isRunning_SetBit(void* Obj)
+	{
+		((UMyAnimInstance*)Obj)->isRunning = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isRunning = { "isRunning", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UMyAnimInstance), &Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isRunning_SetBit, METADATA_PARAMS(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isRunning_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isRunning_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isReloading_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "MyAnimInstance.h" },
+	};
+#endif
+	void Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isReloading_SetBit(void* Obj)
+	{
+		((UMyAnimInstance*)Obj)->isReloading = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isReloading = { "isReloading", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UMyAnimInstance), &Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isReloading_SetBit, METADATA_PARAMS(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isReloading_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isReloading_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_velocity_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "MyAnimInstance.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_velocity = { "velocity", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyAnimInstance, velocity), METADATA_PARAMS(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_velocity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_velocity_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_reloadMontage_MetaData[] = {
+>>>>>>> Stashed changes
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Pawn" },
+		{ "ModuleRelativePath", "MyAnimInstance.h" },
+	};
+#endif
+<<<<<<< Updated upstream
+	void Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isOnFire_SetBit(void* Obj)
+	{
+		((UMyAnimInstance*)Obj)->isOnFire = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isOnFire = { "isOnFire", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UMyAnimInstance), &Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isOnFire_SetBit, METADATA_PARAMS(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isOnFire_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isOnFire_MetaData)) };
+=======
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_reloadMontage = { "reloadMontage", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UMyAnimInstance, reloadMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_reloadMontage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_reloadMontage_MetaData)) };
+>>>>>>> Stashed changes
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UMyAnimInstance_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_speed,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_horizontal,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_vertical,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isOnAim,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isOnFire,
+<<<<<<< Updated upstream
+=======
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_movementDir,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isRunning,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_isReloading,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_velocity,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UMyAnimInstance_Statics::NewProp_reloadMontage,
+>>>>>>> Stashed changes
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UMyAnimInstance_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UMyAnimInstance>::IsAbstract,
@@ -158,9 +250,15 @@ void EmptyLinkFunctionForGeneratedCodeMyAnimInstance() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_SideProject_Source_SideProject_MyAnimInstance_h_Statics::ClassInfo[] = {
+<<<<<<< Updated upstream
 		{ Z_Construct_UClass_UMyAnimInstance, UMyAnimInstance::StaticClass, TEXT("UMyAnimInstance"), &Z_Registration_Info_UClass_UMyAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyAnimInstance), 1194187893U) },
 	};
 	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_SideProject_Source_SideProject_MyAnimInstance_h_3183513307(TEXT("/Script/SideProject"),
+=======
+		{ Z_Construct_UClass_UMyAnimInstance, UMyAnimInstance::StaticClass, TEXT("UMyAnimInstance"), &Z_Registration_Info_UClass_UMyAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UMyAnimInstance), 4026155685U) },
+	};
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_SideProject_Source_SideProject_MyAnimInstance_h_2147197463(TEXT("/Script/SideProject"),
+>>>>>>> Stashed changes
 		Z_CompiledInDeferFile_FID_SideProject_Source_SideProject_MyAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_SideProject_Source_SideProject_MyAnimInstance_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -18,6 +18,7 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	virtual void PostInitializeComponents() override;
 
 	/** Called for forwards/backward input */
 	void MoveForward(float Value);
@@ -38,14 +39,38 @@ public:
 	float GetHorizontalForAnimation();
 	float GetVerticalForAnimation();
 
+	void Reload();
+
 	void Aim();
 	void Fire();
 
 	void StopAimming();
+<<<<<<< Updated upstream
 	void StopFiring();
 
 	bool isFire;
 	bool temp;
+=======
+
+	void Fire();
+	void StopFiring();
+	
+	void Run();
+	void StopRunning();
+
+	UFUNCTION()
+	void OnReloadMonatageEnded(UAnimMontage* montage, bool bInterrupted);
+
+	UPROPERTY(EditAnywhere, BluePrintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
+	bool isFire;
+	UPROPERTY(EditAnywhere, BluePrintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
+	bool isOnAim;
+	UPROPERTY(EditAnywhere, BluePrintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
+	bool isRunning;
+	UPROPERTY(EditAnywhere, BluePrintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
+	bool isReloading;
+
+>>>>>>> Stashed changes
 private:
 	UPROPERTY(VisibleAnywhere)
 	class USpringArmComponent* springArm;
@@ -61,4 +86,7 @@ private:
 
 	UPROPERTY(VisibleAnywhere)
 	class UFireComponent* fireComponent;
+
+	UPROPERTY(VisibleAnywhere)
+	class UMyAnimInstance* myInstance;
 };
